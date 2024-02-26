@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Person {
 	private String ime;
 	private String prezime;
-	private int age;
+	private int godina;
 	public String getIme() {
 		return ime;
 	}
@@ -18,26 +18,26 @@ public class Person {
 	public void setPrezime(String prezime) {
 		this.prezime = prezime;
 	}
-	public int getAge() {
-		return age;
+	public int getGodina() {
+		return godina;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setGodina(int godina) {
+		this.godina = godina;
 	}
-	public Person(String ime, String prezime, int age) {
+	public Person(String ime, String prezime, int godina) {
 		this.ime = ime;
 		this.prezime = prezime;
-		this.age = age;
+		this.godina = godina;
 	}
 	public Person() {
 	}
 	@Override
 	public String toString() {
-		return "Person [ime=" + ime + ", prezime=" + prezime + ", age=" + age + "]";
+		return "Person [ime=" + ime + ", prezime=" + prezime + ", godina=" + godina + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(age, ime, prezime);
+		return Objects.hash(godina, ime, prezime);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -48,7 +48,7 @@ public class Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		return age == other.age && Objects.equals(ime, other.ime) && Objects.equals(prezime, other.prezime);
+		return godina == other.godina && Objects.equals(ime, other.ime) && Objects.equals(prezime, other.prezime);
 	}
 	
 	
